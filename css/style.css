@@ -4,21 +4,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
 
-:root{
+:root {
     --font1: Verdana, Geneva, Tahoma, sans-serif;;
     --font2: 'Passion One', cursive;
     --font3: 'Courgette', cursive;
+
+    --font-weight-normal: normal;
+    --font-weight-bold: bold;
+
+    --font-size-normal: 1.2rem;
+    --font-size-title: 5rem;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
 
 html, body{ 
-    min-height: 100vh;
+    min-height: 100%;
     background-color: darkgray;
     font-family: var(--font1);
-    font-size: 1em;
 }
 
 header{
@@ -27,22 +33,20 @@ header{
     text-align: center;
 }
 
-header > h1{
-    font-family: var(--font2);
-    padding-top: 30px;
+.title{
+    font: var(--font-weight-normal) var(--font-size-title) var(--font2);
+    padding-top: 1.875rem;
     font-variant: small-caps;
-    font-size: 7vw;
-    font-weight: normal;
 }
 
-header > p{
-    padding-bottom: 30px;
+header p{
+    padding-bottom: 1.875rem;
 }
 
 header a, footer a{
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
 }
 
 header a:hover, footer a:hover{
@@ -50,15 +54,17 @@ header a:hover, footer a:hover{
 }
 
 section{
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    padding-left: 10px;
-    line-height: 2em;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 4rem;
+    line-height: 3rem;
     font-family: var(--font3);
-    font-size: 2.9vw;
+    font-size: var(--font-size-normal);
 }
-section > p{
-    padding-bottom: 1em;
+
+section p{
+    font-size: var(--font-size-normal);
+    padding-bottom: 1rem;
 }
 
 section.normal{
@@ -80,7 +86,7 @@ section.imagem{
 
 section.imagem > p{
     display: inline-block;
-    padding: 10px;
+    padding: 0.625rem;
     background-color: rgba(0, 0, 0, 0.295);
     text-shadow: 1px 1px 0px black;
 }
@@ -94,8 +100,19 @@ section#img02{
 }
 
 footer{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 0.625rem;
+}
+
+@media (max-width: 550px) {
+    :root {
+        --font-size-normal: 1.35rem;
+        --font-size-title: 3rem;
+    }
+
+    section{ 
+        padding-left: 2rem;
+    }
 }
