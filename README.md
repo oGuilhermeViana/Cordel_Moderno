@@ -5,4 +5,4 @@ projeto do cordel de Milton Duarte
 HTML
 CSS
 
-<a href="https://oguilhermeviana.github.io/Cordel_Moderno/" target="_blank">Cordel</a>
+<a href="https://oguilhermeviana.github.io/Cordel_Moderno/" target="_blank">Cordel Moderno</a>
